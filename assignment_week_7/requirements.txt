@@ -1,0 +1,8 @@
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn  # for RandomForest, Logistic Regression, etc.
+xgboost # if XGBoost is used
+tensorflow # if Neural Network is used
+streamlit # for deployment
