@@ -1,0 +1,92 @@
+![](img1.png)
+![](img2.png)
+
+Assignment Week 7: Google Stock Price Prediction App
+This project, part of the Celebal Technologies internship assignments, implements a Streamlit web application for predicting Google stock prices using machine learning. The application allows users to interactively upload historical stock data, train a regression model, and get real-time price predictions.
+
+Project Overview
+The core goal of this assignment is to demonstrate the application of machine learning (specifically, regression) to financial time-series data for stock price forecasting. The Streamlit framework is used to create an accessible and interactive user interface.
+
+Features
+Data Upload: Users can upload their own historical Google stock price data in CSV format.
+
+Model Training: Trains a Random Forest Regressor model on the provided dataset to predict the 'Close' price.
+
+Performance Metrics: Displays R-squared (R 
+2
+ ) and Mean Squared Error (MSE) to evaluate the model's accuracy.
+
+Interactive Prediction: Provides input fields for 'Open', 'High', 'Low', and 'Volume' to get an instant 'Close' price prediction from the trained model.
+
+Responsive Design: The Streamlit app is designed to be user-friendly across different devices.
+
+Data Requirements
+The application expects a CSV file named GoogleStockPrices.csv (or any CSV file with similar structure) containing the following columns:
+
+Date: Date of trading (will be used as the DataFrame index).
+
+Open: Opening price of the stock.
+
+High: Highest price reached during the trading day.
+
+Low: Lowest price reached during the trading day.
+
+Close: Closing price of the stock (the target variable for prediction).
+
+Volume: Number of shares traded.
+
+A sample GoogleStockPrices.csv file is included in this directory.
+
+Getting Started (Local Setup)
+Follow these steps to set up and run the Google Stock Price Prediction app on your local machine.
+
+Prerequisites
+Python 3.7+
+
+pip (Python package installer)
+
+Installation
+Navigate to the assignment_week_7 directory:
+If you've cloned the main Celebal_internship_assignments repository, first navigate into this specific assignment's folder:
+
+cd Celebal_internship_assignments/assignment_week_7
+
+Create and activate a virtual environment (highly recommended):
+This isolates your project's dependencies from your system-wide Python packages.
+
+python -m venv .venv
+# On Windows:
+.\.venv\Scripts\activate
+# On macOS/Linux:
+source ./.venv/bin/activate
+
+Install required Python packages:
+All necessary libraries are listed in requirements.txt.
+
+pip install -r requirements.txt
+
+Running the Application
+Ensure data is present: Make sure GoogleStockPrices.csv is in the same directory as main.py.
+
+Run the Streamlit app:
+
+streamlit run main.py
+
+This command will start the Streamlit server and automatically open the application in your default web browser.
+
+Usage
+Upload Data: On the Streamlit app's interface, click the "Upload your GoogleStockPrices.csv file" button and select your data file.
+
+Train Model: After the data preview appears, click the "Train Model" button. A spinner will indicate that the model is training. Once complete, the model's R-squared and MSE scores will be displayed.
+
+Make Prediction: Input new values for 'Open Price', 'High Price', 'Low Price', and 'Volume' in the provided fields. Click the "Predict" button to see the predicted 'Close' price.
+
+Project Files
+main.py: The main Streamlit application script.
+
+requirements.txt: Lists all Python dependencies required to run the application.
+
+GoogleStockPrices.csv: The dataset used for training and prediction.
+
+google-stock-price-prediction.ipynb: The Jupyter Notebook detailing the exploratory data analysis (EDA), model selection, and training process that informed main.py.
+
